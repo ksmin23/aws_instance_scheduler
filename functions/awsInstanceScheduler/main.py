@@ -195,63 +195,74 @@ class JandiWebhook:
 
     @staticmethod
     def send_err_message(msg, connect_info_list=None):
-        JandiWebhook.send_message(msg, JandiWebhook.color_err, connect_info_list)
+        #JandiWebhook.send_message(msg, JandiWebhook.color_err, connect_info_list)
+        pass
 
     @staticmethod
     def send_warning_message(msg, connect_info_list=None):
-        JandiWebhook.send_message(msg, JandiWebhook.color_warning, connect_info_list)
+        #JandiWebhook.send_message(msg, JandiWebhook.color_warning, connect_info_list)
+        pass
 
     @staticmethod
     def send_ok_message(msg, connect_info_list=None):
-        JandiWebhook.send_message(msg, JandiWebhook.color_ok, connect_info_list)
+        #JandiWebhook.send_message(msg, JandiWebhook.color_ok, connect_info_list)
+        pass
 
     @staticmethod
     def send_start_rds_server_message(schedule, start_rds_instance_list):
-        JandiWebhook.send_ok_message(
-            '{0} 스케쥴 RDS 서버를 시작 합니다'.format(schedule['ScheduleName']),
-            JandiWebhook.get_rds_server_connect_info_list('RDS 시작 서버 목록', start_rds_instance_list))
+        #JandiWebhook.send_ok_message(
+        #    '{0} 스케쥴 RDS 서버를 시작 합니다'.format(schedule['ScheduleName']),
+        #    JandiWebhook.get_rds_server_connect_info_list('RDS 시작 서버 목록', start_rds_instance_list))
+        pass
 
     @staticmethod
     def send_start_ec2_server_message(schedule, start_ec2_instance_list):
-        JandiWebhook.send_ok_message(
-            '{0} 스케쥴 EC2 서버를 시작 합니다'.format(schedule['ScheduleName']),
-            JandiWebhook.get_ec2_server_connect_info_list('EC2 시작 서버 목록', start_ec2_instance_list))
+        #JandiWebhook.send_ok_message(
+        #    '{0} 스케쥴 EC2 서버를 시작 합니다'.format(schedule['ScheduleName']),
+        #    JandiWebhook.get_ec2_server_connect_info_list('EC2 시작 서버 목록', start_ec2_instance_list))
+        pass
 
     @staticmethod
     def send_start_rds_server_group_message(schedule, server_group, start_rds_instance_list):
-        JandiWebhook.send_ok_message(
-            '{0} 스케쥴 {1} 서버 그룹을 시작합니다'.format(schedule['ScheduleName'], server_group['GroupName']),
-            JandiWebhook.get_rds_server_connect_info_list('RDS 시작 서버 목록', start_rds_instance_list))
+        #JandiWebhook.send_ok_message(
+        #    '{0} 스케쥴 {1} 서버 그룹을 시작합니다'.format(schedule['ScheduleName'], server_group['GroupName']),
+        #    JandiWebhook.get_rds_server_connect_info_list('RDS 시작 서버 목록', start_rds_instance_list))
+        pass
 
     @staticmethod
     def send_start_ec2_server_group_message(schedule, server_group, start_ec2_instance_list):
-        JandiWebhook.send_ok_message(
-            '{0} 스케쥴의 {1} 서버 그룹을 시작합니다'.format(schedule['ScheduleName'], server_group['GroupName']),
-            JandiWebhook.get_ec2_server_connect_info_list('EC2 시작 서버 목록', start_ec2_instance_list))
+        #JandiWebhook.send_ok_message(
+        #    '{0} 스케쥴의 {1} 서버 그룹을 시작합니다'.format(schedule['ScheduleName'], server_group['GroupName']),
+        #    JandiWebhook.get_ec2_server_connect_info_list('EC2 시작 서버 목록', start_ec2_instance_list))
+        pass
 
     @staticmethod
     def send_stop_ec2_server_message(schedule, stop_ec2_instance_list):
-        JandiWebhook.send_ok_message(
-            '{0} 스케쥴의 EC2 서버를 중지합니다'.format(schedule['ScheduleName']),
-            JandiWebhook.get_ec2_server_connect_info_list('EC2 중지 서버 목록', stop_ec2_instance_list))
+        #JandiWebhook.send_ok_message(
+        #    '{0} 스케쥴의 EC2 서버를 중지합니다'.format(schedule['ScheduleName']),
+        #    JandiWebhook.get_ec2_server_connect_info_list('EC2 중지 서버 목록', stop_ec2_instance_list))
+        pass
 
     @staticmethod
     def send_stop_rds_server_message(schedule, stop_rds_instance_list):
-        JandiWebhook.send_ok_message(
-            '{0} 스케쥴의 RDS 서버를 중지합니다'.format(schedule['ScheduleName']),
-            JandiWebhook.get_rds_server_connect_info_list('RDS 중지 서버 목록', stop_rds_instance_list))
+        #JandiWebhook.send_ok_message(
+        #    '{0} 스케쥴의 RDS 서버를 중지합니다'.format(schedule['ScheduleName']),
+        #    JandiWebhook.get_rds_server_connect_info_list('RDS 중지 서버 목록', stop_rds_instance_list))
+        pass
 
     @staticmethod
     def send_stop_alert_message(schedule_name, stop_date_time, remain):
-        stop_alert_msg = '잠시후 {0} 스케쥴의 모든 서버가 중지 됩니다.'.format(schedule_name)
-        stop_time_msg = JandiWebhook.build_connect_info('중지 시간', str(stop_date_time))
-        remain_time_msg = JandiWebhook.build_connect_info('남은 시간', str(remain) + '분')
-        JandiWebhook.send_warning_message(stop_alert_msg, [stop_time_msg, remain_time_msg])
+        #stop_alert_msg = '잠시후 {0} 스케쥴의 모든 서버가 중지 됩니다.'.format(schedule_name)
+        #stop_time_msg = JandiWebhook.build_connect_info('중지 시간', str(stop_date_time))
+        #remain_time_msg = JandiWebhook.build_connect_info('남은 시간', str(remain) + '분')
+        #JandiWebhook.send_warning_message(stop_alert_msg, [stop_time_msg, remain_time_msg])
+        pass
 
     @staticmethod
     def send_exception_err_message(schedule, e, error_stack):
-        connect_info = JandiWebhook.build_connect_info(str(e), error_stack)
-        JandiWebhook.send_err_message('{0} 스케쥴에서 에러가 발생하였습니다'.format(schedule['ScheduleName']), [connect_info])
+        #connect_info = JandiWebhook.build_connect_info(str(e), error_stack)
+        #JandiWebhook.send_err_message('{0} 스케쥴에서 에러가 발생하였습니다'.format(schedule['ScheduleName']), [connect_info])
+        pass
 
     @staticmethod
     def get_rds_server_connect_info_list(title, start_rds_instance_list) -> list:
